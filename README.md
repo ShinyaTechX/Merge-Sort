@@ -77,6 +77,34 @@ Output: [1, 2, 4, 5]
 
 ---
 
+## Merge Sort Visualization(Tree Diagram)
+Input: [38, 27, 43, 3, 9, 82, 10]
+* Splitting Phase(Divide)
+                    [38,27,43,3,9,82,10]
+                   /                     \
+        [38,27,43]                      [3,9,82,10]
+         /      \                      /           \
+     [38]   [27,43]              [3,9]         [82,10]
+             /    \               /  \           /   \
+          [27]  [43]          [3]  [9]       [82]  [10]
+
+At the bottom, every element is now individually sorted
+
+* Merging Phase(Conquer)
+Now we merge step by step:
+[27] + [43] → [27,43]
+[38] + [27,43] → [27,38,43]
+
+[3] + [9] → [3,9]
+[82] + [10] → [10,82]
+[3,9] + [10,82] → [3,9,10,82]
+
+Final:
+[27,38,43] + [3,9,10,82]
+→ [3,9,10,27,38,43,82]
+
+---
+
 ## 📚 Applications
 
 * Sorting large datasets
@@ -91,3 +119,4 @@ Output: [1, 2, 4, 5]
 Merge Sort is a reliable and efficient sorting algorithm with guaranteed **O(n log n)** performance, making it a great choice for stable and large-scale sorting tasks.
 
 ---
+
